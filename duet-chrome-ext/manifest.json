@@ -1,0 +1,19 @@
+{
+    "name": "Meet Joinees Notifier",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Adds the ability to receive a notification when a participant joins a Google Meet",
+    "author": "<YOUR_EMAIL>",
+    "content_scripts": [
+        {
+          "matches": ["https://meet.google.com/*"],
+          "js": ["content.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+            "notifications"
+    ]
+}
